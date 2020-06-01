@@ -1,3 +1,4 @@
+//Linked List class from here
 class Node 
 {
   var data;
@@ -108,3 +109,4 @@ class Llist
   }
 
 }
+//Linked List class end
