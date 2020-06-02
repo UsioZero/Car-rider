@@ -38,7 +38,7 @@ class Truck extends Car {
 }
 
 class Racing extends Car {
-  int fuelkm = 5;
+  int fuelkm = 4;
   int moneykm = 70;
   Racing() {
     super.money -= 6000;
