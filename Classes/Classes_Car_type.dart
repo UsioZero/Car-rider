@@ -1,3 +1,5 @@
+import 'dart:math';
+
 class Car {
   int maxFuel = 100;
   int fuel = 100;
@@ -30,7 +32,11 @@ class Truck extends Car {
   void ride() {
     if (super.fuel >= this.fuelkm * 10) {
       super.fuel -= this.fuelkm * 10;
-      super.money += this.moneykm * 10;
+      int min = 10;
+      int max = 40;
+      Random r = new Random();
+      this.moneykm = min + r.nextInt(max - min);
+      super.money += 10 * this.moneykm;
     } else {
       print('You have only $fuel fuel, please refilling your car(type ref)');
     }
@@ -48,6 +54,10 @@ class Racing extends Car {
   void ride() {
     if (super.fuel >= this.fuelkm * 10) {
       super.fuel -= this.fuelkm * 10;
+      int min = 10;
+      int max = 90;
+      Random r = new Random();
+      this.moneykm = min + r.nextInt(max - min);
       super.money += 10 * this.moneykm;
     } else {
       print('You have only $fuel fuel, please refilling your car(type ref).');
